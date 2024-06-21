@@ -71,10 +71,12 @@ function calculateCorrectAnswer() {
     let operand2 = parseInt(document.getElementById("operand2").innerText);
     let operator = document.getElementById("operator").innerText;
 
+    alert(operator);
     if (operator === "+") {
         return [operand1 + operand2, "addition"];
     } else if (operator === "x") {
-        return [operand1 + operand2, "multiply"];
+        alert("got here");
+        return [operand1 * operand2, "multiply"];
     } else {
         alert(`Unimplemented operator ${operator}`);
         throw `Unimplmeneted operator ${operator}. Aborting!`;
@@ -108,7 +110,7 @@ function displaySubtractQuestion() {
 
 }
 
-function displayMultiplyQuestion() {
+function displayMultiplyQuestion(operand1, operand2) {
     document.getElementById("operand1").textContent = operand1;
     document.getElementById("operand2").textContent = operand2;
     document.getElementById("operator").textContent = "x";
