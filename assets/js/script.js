@@ -71,11 +71,9 @@ function calculateCorrectAnswer() {
     let operand2 = parseInt(document.getElementById("operand2").innerText);
     let operator = document.getElementById("operator").innerText;
 
-    alert(operator);
     if (operator === "+") {
         return [operand1 + operand2, "addition"];
     } else if (operator === "x") {
-        alert("got here");
         return [operand1 * operand2, "multiply"];
     } else {
         alert(`Unimplemented operator ${operator}`);
